@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset='utf-8'>
+    <title>Serious News</title> 
+
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"> 
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <script src="../js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script> 
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function () {
+        $("#signin").click(function () {
+          var win = window.open("popup.html", "browserid-signin", "menubar=no,location=yes,resizable=yes,scrollbars=no,status=no,height=375,width=700");
+        });
+      });
+    </script> 
+</head> 
+<body>
+
+<h2>Serious News</h2>
+
+<p>
+  This is a site the user has created an account with before.
+  They will only be asked to sign back into this site because they previously logged out before.
+</p>
+
+<button id="signin">Sign In</button>
+
+</body>
+</html>
