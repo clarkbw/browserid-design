@@ -7,25 +7,149 @@
     <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"> 
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
-    <script src="../js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script> 
-    <script type="text/javascript" charset="utf-8">
-      $(document).ready(function () {
-        $("#signin").click(function () {
-          var win = window.open("popup.html", "browserid-signin", "menubar=no,location=yes,resizable=yes,scrollbars=no,status=no,height=375,width=700");
-        });
-      });
-    </script> 
+    <script src="../js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/shared.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+    h2 {
+        font-family: Times, Georgia, serif;
+    }
+    td > h3 {
+        color: #555;
+        font-size: 90%;
+        margin-bottom: 10px;
+    }
+    td > p:first-letter {
+        font-weight: bold;
+        font-size: 140%;
+        color: #444;
+    }
+    </style>
 </head> 
 <body>
 
-<h2>Serious News</h2>
+<table>
+    <tbody>
+    <tr>
+        <td colspan="6"><h2>Serious News</h2></td>
+    </tr>
+    <tr>
+        <td colspan="6" class="signin"><a href="javascript:void(0);" id="signin"><img src="https://browserid.org/i/sign_in_red.png"/></a></td>
+    </tr>
 
-<p>
-  This is a site the user has created an account with before.
-  They will only be asked to sign back into this site because they previously logged out before.
-</p>
+    <tr>
+        <td class="navigation" rowspan="4">
+            <ul>
+                <li>Arts</li>
+                <li>Entertainment</li>
+                <li>Fashion</li>
+                <li>Leasure</li>
+                <li>Economy</li>
+                <li>Real Estate</li>
+                <li>Local</li>
+                <li>Sports</li>
+                <li>Regional</li>
+                <li>Politics</li>
+                <li>World</li>
+            </ul>
+        </td>
+        <td>
+            <h3>The Arts</h3>
+        <p>
+            Vinyl mustache ea dolor velit. American apparel etsy trust fund vice, sapiente williamsburg reprehenderit ut fap echo park four loko irony eiusmod. Yr before they sold out cupidatat odio master cleanse. High life next level etsy irony, ea adipisicing consectetur qui fugiat nihil. 
+        </p>
+        </td>
 
-<button id="signin">Sign In</button>
+        <td colspan="2" rowspan="2">
+            <h3>The Economy</h3>
+            <p>
+                Iphone ethical irure id et four loko. Eiusmod cliche nulla blog, laborum shoreditch food truck fanny pack dreamcatcher. Aute est viral, placeat labore marfa ethical keffiyeh vinyl art party. Bicycle rights homo voluptate jean shorts, american apparel anim quis.
+            </p>
+            <p>
+                Velit qui etsy chambray, sint aesthetic fap fanny pack cosby sweater exercitation readymade vero est nulla sed. Placeat fixie artisan, craft beer art party high life wayfarers. Aliqua fixie sed stumptown echo park, sustainable sartorial aute ex VHS gentrify cosby sweater shoreditch keytar.
+            </p>
+        </td>
+
+        <td rowspan="2">
+            <h3>Weather</h3>
+            <p>
+            Minim sartorial laborum, nostrud tattooed ea mcsweeney's fixie pitchfork messenger bag delectus photo booth irony. Placeat keytar four loko freegan sustainable proident, sint ethical trust fund farm-to-table quis. Nihil dolor helvetica ullamco, enim wes anderson wolf carles skateboard et DIY nesciunt. 
+            </p>
+        </td>
+
+        <td rowspan="2">
+            <h3>TV Listings</h3>
+            <p>
+            Leggings next level gluten-free, nihil anim scenester single-origin coffee enim. Four loko biodiesel veniam, sed wolf trust fund williamsburg quis proident dolore photo booth locavore twee cred. 
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <h3>Entertainment</h3>
+        <p>
+        Beard excepteur terry richardson photo booth quinoa whatever. VHS keytar quis, aliquip scenester lo-fi ex viral williamsburg esse eu et delectus cupidatat proident. Keytar skateboard commodo, terry richardson aliqua accusamus seitan.
+        </p>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td rowspan="2">
+            <h3>Fashion</h3>
+        <p>
+        Viral sapiente pitchfork et reprehenderit readymade, VHS next level fixie vice gluten-free. You probably haven't heard of them quis gentrify blog laboris. Culpa banh mi consequat, nesciunt craft beer letterpress occaecat sapiente jean shorts keytar beard. Cardigan accusamus squid, viral aliqua tattooed officia laborum next level ex thundercats eu ethical portland +1. Wolf proident sed vinyl ea. 
+        </p>
+        </td>
+
+        <td colspan="2">
+            <h3>Local News</h3>
+            <p>
+            Elit eiusmod delectus, nesciunt butcher ad nihil salvia chambray skateboard pitchfork portland vice. Reprehenderit banksy retro vegan. Scenester ad mustache, lo-fi stumptown labore magna wes anderson consectetur. Wes anderson cred trust fund, excepteur consectetur you probably haven't heard of them butcher enim.
+            </p>
+        </td>
+
+        <td colspan="2">
+            <h3>Sports</h3>
+            <p>
+            Magna consequat single-origin coffee art party food truck consectetur. Butcher banh mi tempor reprehenderit, placeat cred id laborum. Leggings next level gluten-free, nihil anim scenester single-origin coffee enim. Four loko biodiesel veniam, sed wolf trust fund williamsburg quis proident dolore photo booth locavore twee cred. Ethical proident skateboard, excepteur DIY brooklyn marfa wes anderson 8-bit enim. Food truck banksy gluten-free scenester twee placeat. Vinyl magna mixtape anim, assumenda dolore scenester wes anderson exercitation.
+            </p>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+            <h3>Regional</h3>
+            <p>
+                Banh mi before they sold out 8-bit officia viral, tattooed high life enim fugiat et butcher locavore. Helvetica keffiyeh placeat reprehenderit +1.
+            </p>
+        </td>
+
+        <td>
+            <h3>Politics</h3>
+            <p>
+                Locavore nihil reprehenderit stumptown, blog vero artisan mcsweeney's cupidatat letterpress vegan. Ut aute chambray, adipisicing farm-to-table nulla reprehenderit.
+            </p>
+        </td>
+
+        <td>
+            <h3>World</h3>
+            <p>
+                Keffiyeh VHS quis, vice irure wes anderson sunt vinyl sint consectetur mustache ullamco single-origin coffee. Artisan dreamcatcher aesthetic, mustache squid eiusmod enim fanny pack nulla etsy ethical qui terry richardson. Nihil dolore VHS ea.
+            </p>
+        </td>
+
+        <td>
+            <h3>Curmudgeons</h3>
+            <p>
+                Ethical proident skateboard, excepteur DIY brooklyn marfa wes anderson 8-bit enim. Food truck banksy gluten-free scenester twee placeat. Vinyl magna mixtape anim, assumenda dolore scenester wes anderson exercitation.
+            </p>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
 
 </body>
 </html>
