@@ -179,7 +179,7 @@ label {
     text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
 }
 
-input[type=text] {
+input[type=email] {
     width: 100%;
     font-size: 14px;
     padding: 5px;
@@ -199,7 +199,7 @@ input[type=text] {
             box-shadow: 1px 1px 0 rgba(255,255,255,0.5);
 }
 
-input[type=text]:focus {
+input[type=email]:focus {
     border: 1px solid #549FDC;
     
     -webkit-border-radius: 0;

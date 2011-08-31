@@ -4,11 +4,33 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">  
     <title>Sign In with BrowserID</title> 
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/popup.css" type="text/css" media="screen"> 
     <script src="../js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script> 
     <script src="../js/create.js" type="text/javascript" charset="utf-8"></script> 
-
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    #create,
+    #password_section,
+    #create_text_section {
+        display: none;
+    }
+    #create_text_section {
+        color: #222;
+    }
+    .section {
+        min-height: 55px;
+    }
+    #footer .help {
+        float: right;
+    }
+    #footer .help > a {
+        color: #62615F;
+    }
+    #checkemail {
+        display: none;
+        text-align: center;
+    }
+    </style>
 </head> 
 <body>
 
@@ -17,42 +39,58 @@
     <div id="header" class="cf">
         <ul>
             <li><a class="home" href="#"></a></li>
-            <li>Sign In to 'Celebrity Gossip' with BrowserID</li>
+            <li>Sign In</li>
         </ul>
     </div>
     
     <div id="formWrap" class="cf">
 
-    
         <div id="favicon">
             <div class="table">
                 <div class="vertical">
                     <img src="i/beer.png">
-                    <strong>http://celebritygossip.com</strong>
+                    <strong>celebritygossip.com</strong>
                 </div>
             </div>
         </div>
 
-    
         <div id="signIn">
             <div class="arrow"></div>
             <div class="table">
                 <form class="vertical">
                     <ul id="inputs">
-                        <li>
+                        <li class="section">
                             <label for="email" class="serif">Email</label>
-                            <input id="email" class="sans" placeholder="Your email" type="text">
-
-                        </li> 
+                            <input id="email" class="sans" placeholder="Your email" type="email" autocapitalize="off" autocorrect="off" autofocus required x-moz-errormessage="an email address is required">
+                        </li>
+                        <li class="section">
+                            <div id="password_section">
+                                <label for="password" class="half serif">Password</label>
+                                <div class="half right">
+                                    <a class="forgot" href="#">forgot your password?</a>
+                                </div>
+                                <input id="password" class="sans" placeholder="Your password" type="text">
+                            </div>
+                            <div id="create_text_section">
+                                <p><strong>Welcome to using BrowserID!</strong></p>
+                                <p>This email address looks new, so lets get you setup</p>
+                            </div>
+                        </li>
                     </ul>
 
                     <div class="submit cf">
-                        <button>sign in</button>
-
+                        <button id="next">next</button>
+                        <button id="create">Create Account</button>
                     </div>
                 </form>
             </div>
         </div>
+
+        <div id="checkemail">
+            <h2>Now check your email</h2>
+            <div id="displayemail"></div>
+        </div>
+
     </div>
     
     <div id="footer">
@@ -66,7 +104,9 @@
         <div class="new">
             New to BrowserID? <a href="#">Sign up today!</a>
         </div>
-
+        <div class="help">
+            <a href="http://support.mozilla.com/en-US/home" target="_blank">need help?</a>
+        </div>
     </div>
     
 </div>
