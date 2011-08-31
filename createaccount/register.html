@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+    <title>Register: BrowserID</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"> 
+
+    <script src="../js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/register.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 21px;
+  background-image: url('../i/bg.png');
+  overflow-y: scroll;
+}
+#wrapper {
+  width: 700px;
+  min-height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.sans {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.serif {
+  font-family: 'Droid Serif', Georgia, serif;
+}
+#vAlign {
+  width: 700px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#signUp {
+  margin: 122px 0;
+  width: 700px;
+  font-family: 'Droid Serif', Georgia, serif;
+  font-size: 24px;
+  line-height: 32px;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+  position: relative;
+  padding: 0 0 0 250px;
+}
+
+#signUp a {
+  color: #549FDC;
+  text-decoration: underline;
+}
+
+#signUp p {
+  margin: 0 0 16px 0;
+}
+
+.create {
+  background-color: #37A6FF;
+  height: 32px;
+  padding: 0 16px;
+  vertical-align: middle;
+  border: 1px solid #37A6FF;
+  font-size: 16px;
+  font-family: 'Droid Serif', Georgia, serif;
+  color: #fff;
+  text-shadow: -1px -1px 0 #37A6FF;
+  cursor: pointer;
+
+  -webkit-box-shadow: 0 0 0 1px #76C2FF inset;
+     -moz-box-shadow: 0 0 0 1px #76C2FF inset;
+       -o-box-shadow: 0 0 0 1px #76C2FF inset;
+          box-shadow: 0 0 0 1px #76C2FF inset;
+
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+       -o-border-radius: 5px;
+          border-radius: 5px;
+
+  background-image: -moz-linear-gradient(center top , #76C2FF 0pt, #37A6FF 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #76C2FF), color-stop(100%, #37A6FF));
+}
+
+.create:active {
+  background-color: #006EC6;
+  border: 1px solid #003E70;
+  color: #EEEEEE;
+  text-shadow: -1px -1px 0 #006EC6;
+
+  -webkit-box-shadow: 0 0 5px #003763 inset;
+     -moz-box-shadow: 0 0 5px #003763 inset;
+       -o-box-shadow: 0 0 5px #003763 inset;
+          box-shadow: 0 0 5px #003763 inset;
+
+  background-image: -moz-linear-gradient(center top , #3AA7FF 0%, #006EC6 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3AA7FF), color-stop(100%, #006EC6));
+}
+#signUpFormWrap {
+  margin: 122px 160px;
+}
+
+#signUpFormWrap a.signUpIn {
+  color: #549FDC;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+#signUpFormWrap a.space {
+  margin: 10px 20px 0;
+  display: inline-block;
+}
+
+#signUpForm {
+  padding: 20px;
+  background-color: rgba(0,0,0,0.035);
+
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+       -o-border-radius: 5px;
+          border-radius: 5px;
+}
+
+#signUpForm ul {
+  margin: 20px 0;
+  list-style-type: none;
+}
+
+#signUpForm li {
+  padding: 0 0 10px 0;
+}
+
+#signUpForm label {
+  display: block;
+  color: #62615F;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+}
+
+#signUpForm label.half,
+.half {
+  width: 50%;
+  display: inline-block;
+  float: left;
+}
+
+a.forgot {
+  color: #888784;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+}
+
+#signUpForm .error {
+  margin-top: 20px;
+  color: red;
+  background-color: rgba(255,0,0,0.25);
+  padding: 5px;
+  line-height: 16px;
+
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+       -o-border-radius: 3px;
+          border-radius: 3px;
+}
+
+#signUpForm .red {
+  color: red;
+}
+
+#signUpForm input[type=email],
+#signUpForm input[type=password] {
+  width: 100%;
+  font-size: 14px;
+  padding: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #A3A29D #C6C3B4 #C6C3B4 #A3A29D;
+  outline: none;
+
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+       -o-border-radius: 3px;
+          border-radius: 3px;
+
+  -webkit-box-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+     -moz-box-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+       -o-box-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+          box-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+}
+
+#signUpForm input[type=email]:focus,
+#signUpForm input[type=password]:focus {
+  border: 1px solid #549FDC;
+
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+       -o-border-radius: 0;
+          border-radius: 0;
+
+  -webkit-box-shadow: 0 0 0 1px #549FDC inset;
+     -moz-box-shadow: 0 0 0 1px #549FDC inset;
+       -o-box-shadow: 0 0 0 1px #549FDC inset;
+          box-shadow: 0 0 0 1px #549FDC inset;
+}
+
+#signUpForm .submit {
+  height: 28px;
+}
+
+#signUpForm .remember {
+  display: inline-block;
+  line-height: 28px;
+}
+
+#signUpForm .remember .checkAlign {
+  float: left;
+}
+
+#signUpForm .remember label {
+  margin-left: 5px;
+  float: left;
+}
+
+#signUpForm .create {
+  font-size: 14px;
+  height: 28px;
+  padding: 0 10px;
+  float: right;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  font-weight: bold;
+}
+
+header ul {
+  display: inline-block;
+}
+
+header ul.nav {
+  float: right;
+}
+
+header ul li {
+  display: inline-block;
+  float: left;
+}
+
+header ul.nav li {
+  margin: 0 0 0 10px;
+}
+
+header a {
+  color: #222;
+}
+
+header a.home {
+  width: 80px;
+  height: 21px;
+  background-image: url('../i/icon.png');
+  display: block;
+  background-position: left 4px;
+  background-repeat: no-repeat;
+}
+
+header a.signIn {
+  background-color: rgba(0,0,0,0.1);
+  padding: 4px 8px;
+
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+       -o-border-radius: 3px;
+          border-radius: 3px;
+}
+
+header a.signIn:hover {
+  background-color: rgba(0,0,0,0.25);
+  text-decoration: none;
+}
+
+header,
+footer {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+}
+
+footer ul li {
+  display: inline-block;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  color: #aaa;
+}
+
+footer a {
+  color: #aaa;
+}
+
+
+/* for floats */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .cf {
+  display: block;
+}
+* html .cf {
+  height: 1%;
+}
+    </style>
+</head>
+<body>
+
+<div id="wrapper">
+
+    <header>
+        <ul class="cf">
+            <li><a class="home" href="/"></a></li>
+        </ul>
+        <ul class="nav cf">
+            <li><a href="/about">How it works</a></li>
+            <li><a href="https://github.com/mozilla/browserid/wiki/How-to-Use-BrowserID-on-Your-Site" target="_blank">Developers</a></li>
+
+            <li><a class="signIn" href="/signin">Sign In</a></li>
+        </ul>
+    </header>
+
+    <div id="vAlign">   
+        <div id="signUpFormWrap">
+            <!-- XXX this form submits to nowhere -->
+            <form id="signUpForm" class="cf">
+                <h1 class="serif">Complete Your Account</h1>
+                <ul class="inputs">
+                    <li>
+                        <label class="serif" for="email">Email Address</label>
+                        <input class="youraddress" id="email" placeholder="Your Email" type="email" disabled="disabled">
+                    </li>
+                    <li>
+                        <label class="serif" for="password">New Password</label>
+                        <input class="sans" id="password" placeholder="Enter a Password" type="password" autofocus>
+                    </li>
+                    <li>
+                        <label class="serif" for="vpassword">Verify Password</label>
+                        <input class="sans" id="vpassword" placeholder="Repeat Password" type="password">
+                    </li>
+                </ul>
+                <div class="submit cf">
+                    <input type="submit" class="create" value="Set Password"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <ul class="cf">
+            <li>By the <a href="http://identity.mozilla.com">Identity Team</a> @ <a href="http://mozillalabs.com">Mozilla Labs</a></li>
+            <li>&mdash;</li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/tos">TOS</a></li>
+            <!--<li>Copyright © 2011 Mozilla.  All rights reserved</li>-->
+        </ul>
+    </footer>
+
+</div>
+
+</body>
+</html>
