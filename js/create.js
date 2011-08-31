@@ -12,7 +12,7 @@ $(document).ready(function () {
   });
   $("#create").click(function () {
     $("#favicon, #signIn").hide();
-    $.cookie('email', $("#email").val());
+    $.cookie('email', $("#email").val(), { path : '/' });
     $("#displayemail").text($("#email").val());
     $("#checkemail").fadeIn();
   });
