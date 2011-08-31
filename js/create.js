@@ -12,7 +12,8 @@ $(document).ready(function () {
   });
   $("#create").click(function () {
     $("#favicon, #signIn").hide();
-    $("#displayemail").text($("#email").val())
+    $.cookie('email', $("#email").val());
+    $("#displayemail").text($("#email").val());
     $("#checkemail").fadeIn();
   });
 });

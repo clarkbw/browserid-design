@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+    <title>Your Email</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"> 
+
+    <script src="../js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/email.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+    body {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        line-height: 21px;
+    }
+    header {
+        padding: 10px;
+        font-weight: bold;
+        background-color: rgba(0,0,0,0.05);
+        border-bottom: 1px solid rgba(0,0,0,0.15);
+    }
+    #email {
+        width: 800px;
+        height: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        border: 1px solid #777;
+        box-shadow: 1px 1px 5px #bbb;
+    }
+    #header {
+        padding: 10px;
+        border-bottom: 1px solid #aaa;
+    }
+    #header .heading {
+        color: #666;
+    }
+    #body {
+        padding: 10px;
+        text-align: center;
+        line-height: 27px;
+    }
+    footer {
+        padding: 20px;
+        border-top: 1px solid rgba(0,0,0,0.05);
+        color: #aaa;
+        text-align: center;
+    }
+    footer a {
+        color: #aaa;
+    }
+    </style>
+</head>
+<body>
+
+<div id="wrapper">
+
+    <header class="cf">
+        <strong>Your Email</strong>
+    </header>
+
+    <div id="emailWrapper">
+
+        <div id="email">
+            <div id="header">
+                <div class="from"><span class="heading">From:</span> <span class="address">noreply@browserid.org</span></div>
+                <div class="to"><span class="heading">To:</span> <span class="address youraddress"></span></div>
+                <div class="subject"><span class="heading">Subject:</span> <strong>Please click the link in this email</strong></div>
+            </div>
+            <div id="body">
+                <h3>Next step, faster login to your favorite sites</h3>
+                <p>
+                    To finish logging into <strong>celebritygossip.com</strong> as <strong class="youraddress"></strong> just click the link below
+                </p>
+                <p>
+                    <a href="register.html">https://browserid.org/s/aslk389daj30ad0djlakl3hakld</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        This fake email message has been brought to you by <a href="http://mozillalabs.com">Mozilla Labs</a>
+    </footer>
+
+</div>
+
+</body>
+</html>
