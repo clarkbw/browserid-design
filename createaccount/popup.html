@@ -18,9 +18,6 @@
     #create_text_section {
         color: #222;
     }
-    .section {
-        min-height: 55px;
-    }
     #checkemail {
         display: none;
         text-align: center;
@@ -67,8 +64,8 @@
                                 <input id="password" class="sans" placeholder="Your password" type="text">
                             </div>
                             <div id="create_text_section">
-                                <p><strong>Welcome to using BrowserID!</strong></p>
-                                <p>This email address looks new, so lets get you setup</p>
+                                <p><strong>New to BrowserID?</strong></p>
+                                <p>This email looks new, so lets get you setup</p>
                             </div>
                         </li>
                     </ul>
@@ -82,8 +79,9 @@
         </div>
 
         <div id="checkemail">
-            <h2>Now check your email</h2>
-            <div id="displayemail"></div>
+            <div class="table">
+                <p class="vertical">We've sent a confirmation email to <span id="displayemail"></span>, please verify your email address to continue.</p>
+            </div>
         </div>
 
     </div>

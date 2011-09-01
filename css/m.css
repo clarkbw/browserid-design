@@ -56,6 +56,10 @@ body .arrow {
     display: none;
 }
 
+body #checkemail p {
+    height: 250px;
+}
+
 body #footer {
     padding: 10px;
 }

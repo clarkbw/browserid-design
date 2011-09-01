@@ -264,6 +264,22 @@ button:active {
     text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
 }
 
+#checkemail {
+    text-align: center;
+    padding: 0 20px;
+    background-image: url('../i/bg.png');
+}
+
+#checkemail p {
+    color: #62615F;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+#checkemail #displayemail {
+    color: #222;
+    font-weight: bold;
+}
+
 #footer .new a {
     color: #549FDC;
 }
