@@ -12,6 +12,28 @@
     <script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
     <script src="../js/signin.js" type="text/javascript" charset="utf-8"></script>
 
+    <style type="text/css">
+    #inputs {
+        min-height: 100px;
+    }
+    .add {
+        font-size: 80%;
+    }
+    #inputs li:only-child input {
+        display: none;
+    }
+    #differentEmail {
+        display: none;
+        width: 100%;
+        margin: 5px 0;
+    }
+    #addDifferentEmail {
+        margin: 0 5px;
+    }
+    #newEmail {
+        -moz-box-flex: 1;
+    }
+    </style>
 </head> 
 <body>
 
@@ -39,21 +61,19 @@
     
         <div id="signIn">
             <div class="arrow"></div>
-            <div class="table">
+            <div class="table" style="width:325px;margin-right:40px;">
                 <form class="vertical">
-                    <ul id="inputs">
-<!--
-                        <li>
-                            <label for="joe_example_com" class="serif"><input name="email" id="joe_example_com" type="radio"> joe@example.com</label>
-                        </li> 
-                        <li>
-                            <label for="alice_example_com" class="serif"><input name="email" id="alice_example_com" type="radio"> alice@example.com</label>
-                        </li>
--->
-                    </ul>
-
+                    <strong>Sign in using</strong>
+                    <ul id="inputs"></ul>
                     <div class="submit cf">
-                        <button>sign in</button>
+                        <div class="add left half cf">
+                            <a id="useDifferentEmail" href="javascript:void(0);">Use a different email</a>
+                            <div id="differentEmail" class="cf">
+                                <input id="newEmail" type="email"/>
+                                <button id="addDifferentEmail">Add</button>
+                            </div>
+                        </div>
+                        <button id="signInButton">sign in</button>
                     </div>
                 </form>
             </div>
@@ -71,7 +91,9 @@
         <div class="new">
             New to BrowserID? <a href="#">Sign up today!</a>
         </div>
-
+        <div class="help">
+            <a href="http://support.mozilla.com/en-US/home" target="_blank">need help?</a>
+        </div>
     </div>
     
 </div>

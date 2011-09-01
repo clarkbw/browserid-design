@@ -94,8 +94,6 @@ hr {
 }
 
 #signIn {
-    width: 45%;
-    max-width: 423px;
     background-image: url('../i/bg.png');
     position: absolute;
     left: 0;
@@ -103,20 +101,22 @@ hr {
 }
 
 .arrow {
-    width: 45px;
+    width: 40px;
     height: 250px;
     display: block;
     position: absolute;
-    right: -40px;
+    right: 0px;
     top: 0;
     background-image: url('../i/arrow.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #fff;
 }
 
 #favicon {
-    width: 100%;
-    padding-left: 45%;
+    position: absolute;
+    left: 450px;
+    z-index: 10;
 }
 
 #favicon img {
@@ -362,6 +362,13 @@ button:active {
     color: #aaa;
 }
 
+#footer .help {
+    float: right;
+}
+
+#footer .help > a {
+    color: #62615F;
+}
 
 /* for floats */
 .cf:after {
