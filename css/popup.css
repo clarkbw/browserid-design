@@ -100,6 +100,11 @@ hr {
     top: 0;
 }
 
+#signIn .table {
+    width: 325px;
+    margin-right: 40px;
+}
+
 .arrow {
     width: 40px;
     height: 250px;
