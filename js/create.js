@@ -3,6 +3,7 @@ $(document).ready(function () {
     if ($(this).get(0).checkValidity()) {
       $("#next").hide();
       $("#create").show();
+      $("#footer .new").hide();
       $("#create_text_section").slideDown(200);
     }
     return false;
