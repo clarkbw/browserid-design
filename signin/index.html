@@ -9,7 +9,13 @@
 
     <script src="../js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="../js/shared.js" type="text/javascript" charset="utf-8"></script>
-
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function () {
+            $(document).bind("loggedin", function () {
+                document.location = "signedin.html";
+            });
+        });
+    </script>
 </head> 
 <body>
 
