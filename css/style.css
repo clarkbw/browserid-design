@@ -92,9 +92,11 @@ body#signed #info {
     background-color: rgba(240,240,240,0.9);
 }
 
+/*
 body#create #wrapper {
     background-color: #7b7b7b;
 }
+*/
 
 body#create .subWrap {
     width: 972px;
@@ -104,15 +106,23 @@ body#create .subWrap {
     position: relative;
 }
 
+body#create.done .subWrap {
+    background-image: url('../i/create2.gif');
+}
+
 body#create .subWrap .signIn {
     position: absolute;
-    right: 52px;
-    top: 168px;
-    width: 158px;
-    height: 158px;
-    text-align: center;
-    line-height: 164px;
-    background-image: url('../i/highlightcreate.png');
+    right: 6px;
+    top: 224px;
+    width: 165px;
+    height: 22px;
+}
+
+body#create .subWrap .signedin {
+    color: #004276;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 body#create .subWrap .signIn a,
