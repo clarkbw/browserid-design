@@ -139,19 +139,35 @@ body#signed .subWrap {
     position: relative;
 }
 
+body#signed.done .subWrap {
+    background-image: url('../i/signin2.gif');
+}
+
 body#signed #wrapper {
-    background-color: #7f7f7f;
     background-image: url('../i/signinblock.gif');
     background-repeat: repeat-x;
 }
 
+body#signed.done #wrapper {
+    background-image: url('../i/signinblock2.gif');
+}
+
 body#signed .subWrap .signIn {
-    background-image: url("../i/highlightsignin.png");
-    height: 158px;
-    line-height: 168px;
     position: absolute;
-    right: 150px;
-    text-align: center;
-    top: 203px;
-    width: 158px;
+    right: 102px;
+    top: 270px;
+    width: 165px;
+    height: 22px;
+}
+
+body#signed.done .subWrap .signIn {
+    right: 60px;
+    top: 25px;
+}
+
+body#signed.done .subWrap .signedin {
+    color: #B9BBBC;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
