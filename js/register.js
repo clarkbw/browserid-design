@@ -4,6 +4,9 @@ $(document).ready(function () {
   $("#signUpForm").bind("submit", function () {
     $(this).hide();
     $("#congrats").fadeIn();
+    window.setTimeout(function () {
+      document.location = "signedin.html";
+    }, 3 * 1000);
     return false;
   });
 })

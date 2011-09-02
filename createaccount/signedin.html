@@ -8,7 +8,20 @@
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
     <script src="../js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
     <script src="../js/shared.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function () {
+          if ($.cookie('email')) {
+            $(".signIn.signedin").text($.cookie('email'));
+          }
+          window.setInterval(function () {
+            if ($.cookie('email')) {
+              $(".signIn.signedin").text($.cookie('email'));
+            }
+          }, 5 * 1000);
+        });
+    </script>
 
 </head> 
 <body id="create" class="done">
@@ -16,7 +29,7 @@
     <div id="wrapper">
         
         <div class="subWrap">
-            <span class="signIn signedin">me@andychung.ca</span>
+            <span class="signIn signedin"></span>
         </div>
         
     </div>
