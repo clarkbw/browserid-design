@@ -123,6 +123,7 @@ body#create .subWrap .signedin {
     font-weight: bold;
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 body#create .subWrap .signIn a,
@@ -161,8 +162,9 @@ body#signed .subWrap .signIn {
 }
 
 body#signed.done .subWrap .signIn {
-    right: 60px;
+    right: 76px;
     top: 25px;
+    width: 150px;
 }
 
 body#signed.done .subWrap .signedin {
@@ -170,4 +172,5 @@ body#signed.done .subWrap .signedin {
     font-weight: bold;
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
 }
