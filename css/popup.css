@@ -389,6 +389,7 @@ button:active {
 
 #footer .help > a {
     color: #62615F;
+    cursor: help;
 }
 
 /* for floats */
