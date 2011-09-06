@@ -1,9 +1,8 @@
 $(document).ready(function () {
   $("form.vertical").bind("submit", function () {
     if ($(this).get(0).checkValidity()) {
-      $("#next").hide();
+      $("#next, #hint_section").hide();
       $("#create").show();
-      $("#footer .new").hide();
       $("#create_text_section").slideDown(200);
     }
     return false;

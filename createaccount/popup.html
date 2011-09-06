@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
-    <title>Sign In to 'www.nytimes.com'</title> 
+    <title>Sign in to 'www.nytimes.com'</title>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/popup.css" type="text/css" media="screen">
     <script src="../js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
@@ -31,7 +31,6 @@
     <div id="header" class="cf">
         <ul>
             <li><a class="home" href="#"></a></li>
-            <li>Sign In to 'www.nytimes.com'</li>
         </ul>
     </div>
     
@@ -63,9 +62,12 @@
                                 </div>
                                 <input id="password" class="sans" placeholder="Your password" type="text">
                             </div>
+                            <div id="hint_section">
+                                <p>Enter your email address to sign in to <strong>www.nytimes.com</strong></p>
+                            </div>
                             <div id="create_text_section">
-                                <p><strong>New to BrowserID?</strong> <a style="float:right;" href="https://browserid.org/users" target="_blank">learn more</a></p>
-                                <p>This email looks new, so lets get you setup</p>
+                                <p><strong>Welcome BrowserID!</strong></p>
+                                <p>This email looks new, so let's get you set up</p>
                             </div>
                         </li>
                     </ul>
@@ -80,7 +82,11 @@
 
         <div id="checkemail">
             <div class="table">
-                <p class="vertical">We've sent a confirmation email to <span id="displayemail"></span>, please verify <a href="email.html" target="_blank">your email</a> address to continue.</p>
+                <div class="vertical">
+                    <p style="margin:20px auto;font-size:150%;"><strong style="color:#222">Check your email!</strong></p>
+                    <p>We sent a confirmation email to <span id="displayemail"></span></p>
+                    <p>To finish signing in just click the verify link we sent to your email address.</p>
+                </div>
             </div>
         </div>
 
@@ -95,10 +101,10 @@
             <li><a href="#">TOS</a></li>
         </ul>
         <div class="new">
-            New to BrowserID? <a href="#">Sign up today!</a>
+            <p>BrowserID is the fast, secure, and easy way to sign in &mdash; <a style="cursor: help;" href="https://browserid.org/users" target="_blank">learn more</a></p>
         </div>
         <div class="help">
-            <a href="http://support.mozilla.com/en-US/home" target="_blank">need help?</a>
+            <a href="https://browserid.org/users" target="_blank">need help?</a>
         </div>
     </div>
     
