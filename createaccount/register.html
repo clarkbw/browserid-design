@@ -150,10 +150,26 @@ a:hover {
   padding: 0 0 10px 0;
 }
 
-#signUpForm label {
+#signUpForm label,
+#signUpForm p.hint {
   display: block;
   color: #62615F;
   text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+}
+
+#signUpForm p.hint {
+  margin: -20px -20px 20px;
+  padding: 10px 20px 10px 45px;
+  background-color: rgba(0,0,0,0.05);
+  background-image: url('../i/nytimes.png');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  color: #222;
+  
+  -webkit-border-radius: 5px 5px 0 0;
+     -moz-border-radius: 5px 5px 0 0;
+       -o-border-radius: 5px 5px 0 0;
+          border-radius: 5px 5px 0 0;
 }
 
 #signUpForm label.half,
@@ -364,7 +380,8 @@ html[xmlns] .cf {
         <div id="signUpFormWrap">
             <!-- XXX this form submits to nowhere -->
             <form id="signUpForm" class="cf">
-                <h1 class="serif">Complete Your Account</h1>
+                <p class="hint">Finish signing into <span class="website"><strong>http://nytimes.com</strong></span></p>
+                <h1 class="serif">Last step!</h1>
                 <ul class="inputs">
                     <li>
                         <label class="serif" for="email">Email Address</label>
